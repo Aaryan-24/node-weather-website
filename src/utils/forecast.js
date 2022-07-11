@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (bodyError) {
             callback ('Unable to fetch the data. Please provide correct input.', undefined);
         } else {
-            callback (undefined, current.weather_descriptions[0] + ". It is currently " + current.temperature + " degress out.");
+            callback (undefined, current.weather_descriptions[0] + ". It is currently " + current.temperature + " degress out. " + "It feels like " + current.feelslike + " degress. The humidity is " + current.humidity + "%.");
         }
     });
 }
